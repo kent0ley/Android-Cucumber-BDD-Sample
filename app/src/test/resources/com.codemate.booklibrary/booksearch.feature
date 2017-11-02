@@ -41,3 +41,4 @@ Feature: Book Search
       | "Awesome"      | 2                    | "How to be awesome" and "My life as an awesome girl" |
       | "cool"         | 1                    | "I think my teacher is cool"                         |
       | "How to be"    | 1                    | "How to be awesome"                                  |
+
