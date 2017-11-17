@@ -8,6 +8,6 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "app/src/test/resources")
+@CucumberOptions(glue = "com.codemate.booklibrary",  features = "features", plugin = {"pretty", "junit:Folder_Name/cucumber.xml"})
 public class CucumberTests extends TestCase {
 }

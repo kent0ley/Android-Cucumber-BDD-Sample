@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="8" time="0.145534">
+<testcase classname="Book Search" name="List all books" time="0.110625">
+<system-out><![CDATA[Given the library has a book with title "How to be awesome", written by "Jane Smith", published in 16 May 2016.passed
+And a book with title "My life as an awesome girl", written by "Jane Smith", published in 27 July 2016.passed
+And a book with title "I think my teacher is cool", written by "John Doe", published in 01 January 2010.passed
+When the customer wants to know all books in the library....................passed
+Then 3 books should be found................................................passed
+And Book 1 should have the title "How to be awesome"........................passed
+And Book 2 should have the title "My life as an awesome girl"...............passed
+And Book 3 should have the title "I think my teacher is cool"...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Book Search" name="Search books by year" time="0.004344">
+<system-out><![CDATA[Given the library has a book with title "How to be awesome", written by "Jane Smith", published in 16 May 2016.passed
+And a book with title "My life as an awesome girl", written by "Jane Smith", published in 27 July 2016.passed
+And a book with title "I think my teacher is cool", written by "John Doe", published in 01 January 2010.passed
+When the customer searches for books published in year 2016.................passed
+Then 2 books should be found................................................passed
+And Book 1 should have the title "How to be awesome"........................passed
+And Book 2 should have the title "My life as an awesome girl"...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Book Search" name="Search books by author" time="0.002687">
+<system-out><![CDATA[Given the library has a book with title "How to be awesome", written by "Jane Smith", published in 16 May 2016.passed
+And a book with title "My life as an awesome girl", written by "Jane Smith", published in 27 July 2016.passed
+And a book with title "I think my teacher is cool", written by "John Doe", published in 01 January 2010.passed
+When the customer searches for books by author "Jane".......................passed
+Then 2 books should be found................................................passed
+And Book 1 should have the title "How to be awesome"........................passed
+And Book 2 should have the title "My life as an awesome girl"...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Book Search" name="Search books by author 2" time="0.008339">
+<system-out><![CDATA[Given the library has a book with title "How to be awesome", written by "Jane Smith", published in 16 May 2016.passed
+And a book with title "My life as an awesome girl", written by "Jane Smith", published in 27 July 2016.passed
+And a book with title "I think my teacher is cool", written by "John Doe", published in 01 January 2010.passed
+When the customer searches for books by author "Smith"......................passed
+Then 2 books should be found................................................passed
+And Book 1 should have the title "How to be awesome"........................passed
+And Book 2 should have the title "My life as an awesome girl"...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Book Search" name="Search books by author 3" time="0.003357">
+<system-out><![CDATA[Given the library has a book with title "How to be awesome", written by "Jane Smith", published in 16 May 2016.passed
+And a book with title "My life as an awesome girl", written by "Jane Smith", published in 27 July 2016.passed
+And a book with title "I think my teacher is cool", written by "John Doe", published in 01 January 2010.passed
+When the customer searches for books by author "Jane Smith".................passed
+Then 2 books should be found................................................passed
+And Book 1 should have the title "How to be awesome"........................passed
+And Book 2 should have the title "My life as an awesome girl"...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Book Search" name="Search books by title" time="0.011029">
+<system-out><![CDATA[Given the library has a book with title "How to be awesome", written by "Jane Smith", published in 16 May 2016.passed
+And a book with title "My life as an awesome girl", written by "Jane Smith", published in 27 July 2016.passed
+And a book with title "I think my teacher is cool", written by "John Doe", published in 01 January 2010.passed
+When the customer searches for books with title "Awesome"...................passed
+Then 2 books should be found................................................passed
+And Books should be "How to be awesome" and "My life as an awesome girl"....passed
+]]></system-out>
+</testcase>
+<testcase classname="Book Search" name="Search books by title 2" time="0.003098">
+<system-out><![CDATA[Given the library has a book with title "How to be awesome", written by "Jane Smith", published in 16 May 2016.passed
+And a book with title "My life as an awesome girl", written by "Jane Smith", published in 27 July 2016.passed
+And a book with title "I think my teacher is cool", written by "John Doe", published in 01 January 2010.passed
+When the customer searches for books with title "cool"......................passed
+Then 1 books should be found................................................passed
+And Books should be "I think my teacher is cool"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Book Search" name="Search books by title 3" time="0.002055">
+<system-out><![CDATA[Given the library has a book with title "How to be awesome", written by "Jane Smith", published in 16 May 2016.passed
+And a book with title "My life as an awesome girl", written by "Jane Smith", published in 27 July 2016.passed
+And a book with title "I think my teacher is cool", written by "John Doe", published in 01 January 2010.passed
+When the customer searches for books with title "How to be".................passed
+Then 1 books should be found................................................passed
+And Books should be "How to be awesome".....................................passed
+]]></system-out>
+</testcase>
+</testsuite>

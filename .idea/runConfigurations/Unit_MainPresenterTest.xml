@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="MainPresenterTest" type="AndroidJUnit" factoryName="Android JUnit" nameIsGenerated="true">
+  <configuration default="false" name="Unit-MainPresenterTest" type="AndroidJUnit" factoryName="Android JUnit" show_console_on_std_out="true" show_console_on_std_err="true">
     <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
       <pattern>
         <option name="PATTERN" value="com.codemate.booklibrary.ui.*" />

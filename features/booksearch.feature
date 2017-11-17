@@ -6,12 +6,14 @@ Feature: Book Search
     And a book with title "My life as an awesome girl", written by "Jane Smith", published in 27 July 2016
     And a book with title "I think my teacher is cool", written by "John Doe", published in 01 January 2010
 
+
   Scenario: List all books
     When the customer wants to know all books in the library
     Then 3 books should be found
       And Book 1 should have the title "How to be awesome"
       And Book 2 should have the title "My life as an awesome girl"
       And Book 3 should have the title "I think my teacher is cool"
+
 
   Scenario: Search books by year
     When the customer searches for books published in year 2016
@@ -41,4 +43,5 @@ Feature: Book Search
       | "Awesome"      | 2                    | "How to be awesome" and "My life as an awesome girl" |
       | "cool"         | 1                    | "I think my teacher is cool"                         |
       | "How to be"    | 1                    | "How to be awesome"                                  |
+
 

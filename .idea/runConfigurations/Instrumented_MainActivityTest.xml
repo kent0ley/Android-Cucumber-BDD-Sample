@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="MainActivityTest" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" nameIsGenerated="true">
+  <configuration default="false" name="Instrumented-MainActivityTest" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
     <module name="app" />
     <option name="TESTING_TYPE" value="2" />
     <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
@@ -44,7 +44,7 @@
     </Profilers>
     <method>
       <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1509640323505" />
+      <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510954481528" />
     </method>
   </configuration>
 </component>

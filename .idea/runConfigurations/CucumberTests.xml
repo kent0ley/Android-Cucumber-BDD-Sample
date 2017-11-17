@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="CucumberTests" type="AndroidJUnit" factoryName="Android JUnit" nameIsGenerated="true">
-    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+  <configuration default="false" name="CucumberTests" type="AndroidJUnit" factoryName="Android JUnit" show_console_on_std_out="true" show_console_on_std_err="true" nameIsGenerated="true">
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" track_test_folders="true" runner="idea">
       <pattern>
         <option name="PATTERN" value="com.codemate.booklibrary.*" />
         <option name="ENABLED" value="true" />
