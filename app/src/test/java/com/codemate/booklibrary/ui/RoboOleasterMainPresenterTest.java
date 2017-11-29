@@ -118,6 +118,7 @@ public class RoboOleasterMainPresenterTest {
                 });
             });
             describe("Search books by title", () -> {
+
                 describe("When the customer searches for books with title:", () -> {
                     Map<String, String> search = new HashMap<String, String>();
                     search.put("Awesome", "2");
@@ -125,13 +126,25 @@ public class RoboOleasterMainPresenterTest {
                     search.put("How to be", "1");
 
                     for (Map.Entry<String, String> entry : search.entrySet()) {
-                        System.out.println("Key = " + entry.getKey()  + library.search(entry.getKey()).size());
+
                         describe(entry.getKey(), () -> {
+
                             it("Then " + entry.getValue() + " books should be found", () -> {
+                              //  System.out.println("Key = " + entry.getKey()  + ' ' + library.search(entry.getKey()).get(0).getTitle() );
+                               // System.out.println(library.search(entry.getKey())  );
                                 Assert.assertTrue(" Expected " + entry.getValue() + " found: " + library.search(entry.getKey()).size(), library.search(entry.getKey()).size() == Integer.parseInt(entry.getValue()));
+
+                                String titles = "";
+                                for (int found = 0; found < library.search(entry.getKey()).size(); found ++ ) {
+                                    titles += " " + library.search(entry.getKey()).get(found).getTitle().toString();
+
+                                }
+                                System.out.println(titles);
+
                             });
                         });
                     }
+
                 });
             });
         });
