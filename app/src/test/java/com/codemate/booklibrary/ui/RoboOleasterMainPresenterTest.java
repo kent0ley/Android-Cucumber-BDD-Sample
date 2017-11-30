@@ -66,7 +66,7 @@ public class RoboOleasterMainPresenterTest {
             describe(" List all books", () -> {
                 describe(" When the customer wants to know all books in the library", () -> {
                     describe("Then 3 books should be found", () -> {
-                        it("", () -> {
+                        it("There are 3 books", () -> {
                             presenter.fetchBooks();
                             verify(mainView).showBooks(DUMMY_BOOKS);
                             Assert.assertTrue(" Expected 3 books found: " + library.getAllBooks().size(), library.getAllBooks().size() == 3);
@@ -130,7 +130,7 @@ public class RoboOleasterMainPresenterTest {
                         describe(entry.getKey(), () -> {
 
                             it("Then " + entry.getValue() + " books should be found", () -> {
-                              //   System.out.println("Key = " + entry.getKey()  + ' ' + library.search(entry.getKey()).get(0).getTitle() );
+                              //  System.out.println("Key = " + entry.getKey()  + ' ' + library.search(entry.getKey()).get(0).getTitle() );
                                // System.out.println(library.search(entry.getKey())  );
                                 Assert.assertTrue(" Expected " + entry.getValue() + " found: " + library.search(entry.getKey()).size(), library.search(entry.getKey()).size() == Integer.parseInt(entry.getValue()));
 

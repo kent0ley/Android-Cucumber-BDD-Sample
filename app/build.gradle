@@ -43,6 +43,7 @@ dependencies {
     testCompile 'info.cukes:cucumber-java:1.2.4'
     testCompile 'info.cukes:cucumber-junit:1.2.4'
     testCompile 'org.mockito:mockito-core:2.5.5'
+    testCompile 'com.greghaskins:spectrum:1.2.0'
     // Main runner
     testCompile 'com.github.OleasterFramework.Oleaster:oleaster-runner:v0.3.4'
 // Robolectric support for Android
