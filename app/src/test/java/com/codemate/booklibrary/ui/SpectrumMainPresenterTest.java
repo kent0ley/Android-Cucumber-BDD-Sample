@@ -11,14 +11,8 @@ import com.greghaskins.spectrum.Spectrum;
 import static com.greghaskins.spectrum.dsl.specification.Specification.beforeEach;
 import static com.greghaskins.spectrum.dsl.specification.Specification.describe;
 import static com.greghaskins.spectrum.dsl.specification.Specification.it;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.contains;
-import static org.hamcrest.Matchers.empty;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
-import static org.junit.Assert.assertEquals;
-import org.junit.Assert;
+import static com.google.common.truth.Truth.assertThat;
+import static com.google.common.truth.Truth.assertWithMessage;
 import org.junit.runner.RunWith;
 import java.sql.Date;
 import java.util.Arrays;
@@ -63,16 +57,16 @@ public class SpectrumMainPresenterTest {
                     it("And the number of books found is 3", () -> {
                         presenter.fetchBooks();
                         verify(mainView).showBooks(DUMMY_BOOKS);
-                        Assert.assertTrue(" Expected 3 books found: " + library.getAllBooks().size(), library.getAllBooks().size() == 3);
+                        assertThat( library.getAllBooks().size()).isEqualTo(3);
                     });
                     it("And Book 1 should have the title \"How to be awesome\"", () -> {
-                        Assert.assertTrue(" Expected \"How to be awesome\" found: " + library.getAllBooks().get(0).getTitle(), library.getAllBooks().get(0).getTitle() == "How to be awesome");
+                        assertThat(library.getAllBooks().get(0).getTitle()).isEqualTo("How to be awesome");
                     });
                     it("And Book 2 should have the title \"My life as an awesome girl\"", () -> {
-                        Assert.assertTrue(" Expected \"My life as an awesome girl\" found: " + library.getAllBooks().get(1).getTitle(), library.getAllBooks().get(1).getTitle() == "My life as an awesome girl");
+                        assertThat(library.getAllBooks().get(1).getTitle()).isEqualTo("My life as an awesome girl");
                     });
                     it("And Book 3 should have the title \"I think my teacher is cool\"", () -> {
-                        Assert.assertTrue(" Expected \"I think my teacher is cool\" found: " + library.getAllBooks().get(2).getTitle(), library.getAllBooks().get(2).getTitle() == "I think my teacher is cool");
+                        assertThat(library.getAllBooks().get(2).getTitle()).isEqualTo("I think my teacher is cool");
                     });
                 });
             });
@@ -81,13 +75,13 @@ public class SpectrumMainPresenterTest {
                 describe("When the customer searches for books published in year 2016", () -> {
                     describe("Then 2 books should be found", () -> {
                         it("And the number of books found is 2", () -> {
-                            Assert.assertTrue(" Expected 2 books found: " + library.search("2016").size(), library.search("2016").size() == 2);
+                            assertThat(library.search("2016").size()).isEqualTo(2);
                         });
                         it("And Book 1 should have the title \"How to be awesome\"", () -> {
-                            Assert.assertTrue(" Expected \"How to be awesome\" found: " + library.search("2016").get(0).getTitle(), library.search("2016").get(0).getTitle() == "How to be awesome");
+                            assertThat(library.getAllBooks().get(0).getTitle()).isEqualTo("How to be awesome");
                         });
                         it("And Book 2 should have the title \"My life as an awesome girl\"", () -> {
-                            Assert.assertTrue(" Expected \"My life as an awesome girl\" found: " + library.search("2016").get(1).getTitle(), library.search("2016").get(1).getTitle() == "My life as an awesome girl");
+                            assertThat(library.getAllBooks().get(1).getTitle()).isEqualTo("My life as an awesome girl");
                         });
                     });
                 });
@@ -99,15 +93,15 @@ public class SpectrumMainPresenterTest {
                         String[] arrayRefVar = {"Jane", "Smith", "Jane Smith"};
                         for (String author : arrayRefVar) {
                             it("And the number of books found is 2 with author: " + author, () -> {
-                                Assert.assertTrue(" Expected 2 books found: " + library.search(author).size(), library.search(author).size() == 2);
+                                assertThat(library.search(author).size()).isEqualTo(2);
                             });
                         }
                         it("And Book 1 should have the title \"How to be awesome\"", () -> {
-                            Assert.assertTrue(" Expected \"How to be awesome\" found: " + library.search(arrayRefVar[0]).get(0).getTitle(), library.search(arrayRefVar[0]).get(0).getTitle() == "How to be awesome");
+                            assertThat(library.getAllBooks().get(0).getTitle()).isEqualTo("How to be awesome");
                         });
 
                         it("And Book 2 should have the title \"My life as an awesome girl\"", () -> {
-                            Assert.assertTrue(/**/" Expected \"My life as an awesome girl\" found: " + library.search(arrayRefVar[1]).get(1).getTitle(), library.search(arrayRefVar[1]).get(1).getTitle() == "My life as an awesome girl");
+                            assertThat(library.getAllBooks().get(1).getTitle()).isEqualTo("My life as an awesome girl");
                         });
                     });
                 });
